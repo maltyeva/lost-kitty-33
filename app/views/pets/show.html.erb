@@ -1,0 +1,5 @@
+<h4><%= @pet.species %> lost in <%= @pet.location %></h4>
+<p>Was found on <%= @pet.date_found.strftime("%b %e, %l:%M %p") %></p>
+<p>Color: <%= @pet.color %> | Size: <%= @pet.size %></p>
+<h4><%= @pet.returned ? "This pet is returned" : "This Pet is still lost" %></h4>
+<%= link_to "Back", pets_path  %> | <%= link_to "Edit", edit_pet_path(@pet) %>

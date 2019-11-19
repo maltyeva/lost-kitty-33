@@ -1,0 +1,13 @@
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :location %>
+  <%= f.input :size %>
+  <%= f.input :species, collection: ["dog", "cat"], as: :radio_buttons %>
+  <%= f.input :color %>
+  <%= f.input :date_found, label: "Was Found on: " %>
+  <% if @pet.persisted? %>
+    <%= f.input :returned %>
+  <% end %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+<!-- @pet = pet.new = new_record? -->
+<!-- @pet = pet.find(params[:id]) = persisted? -->

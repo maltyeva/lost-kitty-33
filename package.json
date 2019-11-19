@@ -1,5 +1,7 @@
 {
   "name": "lost-kitty-33",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
